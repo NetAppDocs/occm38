@@ -1,0 +1,180 @@
+---
+sidebar: sidebar
+permalink: task_managing_cloud_central_accounts.html
+keywords: account settings, workspaces, Connector, account admin, workspace admin, users, associate, disassociate, add user, add users, user management, administer, user, management, remove user, remove users, remove, delete, account, user account, user accounts, add workspace, setup workspace, workspace, Connector, manage Connector, manage workspace, associate Connector
+summary: After you perform initial setup, you might need to later manage users, workspaces, Connectors, and subscriptions.
+---
+
+= Managing users, workspaces, Connectors, and subscriptions
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+link:task_setting_up_cloud_central_accounts.html[After you perform initial setup], you might need to administer your account settings later by managing users, workspaces, Connectors, and subscriptions.
+
+link:concept_cloud_central_accounts.html[Learn more about how Cloud Central accounts work].
+
+== Adding users
+
+Associate Cloud Central users with the Cloud Central account so those users can create and manage working environments in Cloud Manager.
+
+.Steps
+
+. If the user hasn't already done so, ask the user to go to https://cloud.netapp.com[NetApp Cloud Central^] and sign up.
+
+. From the top of Cloud Manager, click the *Account* drop-down.
++
+image:screenshot_account_settings_menu.gif[A screenshot that shows the Account Settings option in the top banner of Cloud Manager.]
+
+. Click *Manage Account* next to the currently selected account.
++
+image:screenshot_manage_account_settings.gif[A screenshot that shows the Manage Account Settings option that's available from the Account drop-down.]
+
+. From the Users tab, click *Associate User*.
+
+. Enter the user's email address and select a role for the user:
++
+* *Account Admin*: Can perform any action in Cloud Manager.
+* *Workspace Admin*: Can create and manage resources in assigned workspaces.
+* *Compliance Viewer*: Can only view compliance information and generate reports for workspaces that they have permission to access.
+
+. If you selected Workspace Admin or Compliance Viewer, select one or more workspaces to associate with that user.
++
+image:screenshot_associate_user.gif[A screenshot that shows how to associate a user by selecting a role and the associated workspaces.]
+
+. Click *Associate User*.
+
+.Result
+
+The user should receive an email from NetApp Cloud Central titled "Account Association." The email includes the information needed to access Cloud Manager.
+
+== Removing users
+
+Disassociating a user makes it so they can no longer access the resources in a Cloud Central account.
+
+.Steps
+
+. From the top of Cloud Manager, click the *Account* drop-down and click *Manage Account*.
++
+image:screenshot_manage_account_settings.gif[A screenshot that shows the Manage Account Settings option that's available from the Account drop-down.]
+
+. From the Users tab, click the action menu in the row that corresponds to the user.
++
+image:screenshot_associate_user_workspace.gif[A screenshot that shows the action menu that is available when hovering over a user's name in the Users table.]
+
+. Click *Disassociate User* and click *Disassociate* to confirm.
+
+.Result
+
+The user can no longer access the resources in this Cloud Central account.
+
+== Managing a Workspace Admin's workspaces
+
+You can associate and disassociate Workspace Admins with workspaces at any time. Associating the user enables them to create and view the working environments in that workspace.
+
+.Steps
+
+. From the top of Cloud Manager, click the *Account* drop-down and click *Manage Account*.
++
+image:screenshot_manage_account_settings.gif[A screenshot that shows the Manage Account Settings option that's available from the Account drop-down.]
+
+. From the Users tab, click the action menu in the row that corresponds to the user.
++
+image:screenshot_associate_user_workspace.gif[A screenshot that shows the action menu that is available when hovering over a user's name in the Users table.]
+
+. Click *Manage Workspaces*.
+
+. Select the workspaces to associate with the user and click *Apply*.
+
+.Result
+
+The user can now access those workspaces from Cloud Manager, as long as the Connector was also associated with the workspaces.
+
+== Managing workspaces
+
+Manage your workspaces by creating, renaming, and deleting them. Note that you can't delete a workspace if it contains any resources. It must be empty.
+
+.Steps
+
+. From the top of Cloud Manager, click the *Account* drop-down and click *Manage Account*.
+
+. Click *Workspaces*.
+
+. Choose one of the following options:
++
+* Click *Add New Workspace* to create a new workspace.
+* Click *Rename* to rename the workspace.
+* Click *Delete* to delete the workspace.
+
+== Managing a Connector's workspaces
+
+You need to associate the Connector with workspaces so Workspace Admins can access those workspaces from Cloud Manager.
+
+If you only have Account Admins, then associating the Connector with workspaces isn't required. Account Admins have the ability to access all workspaces in Cloud Manager by default.
+
+link:concept_cloud_central_accounts.html#users-workspaces-and-service-connectors[Learn more about users, workspaces, and Connectors].
+
+.Steps
+
+. From the top of Cloud Manager, click the *Account* drop-down and click *Manage Account*.
+
+. Click *Connector*.
+
+. Click *Manage Workspaces* for the Connector that you want to associate.
+
+. Select the workspaces to associate with the Connector and click *Apply*.
+
+== Managing subscriptions
+
+After you subscribe from a cloud provider's marketplace, each subscription is available from the Account Settings widget. You have the option to rename a subscription and to disassociate the subscription from one or more accounts.
+
+For example, let's say that you have two accounts and each is billed through separate subscriptions. You might disassociate a subscription from one of the accounts so the users in that account don't accidentally choose the wrong subscription when creating a Cloud Volume ONTAP working environment.
+
+link:concept_cloud_central_accounts.html[Learn more about subscriptions].
+
+.Steps
+
+. From the top of Cloud Manager, click the *Account* drop-down and click *Manage Account*.
+
+. Click *Subscriptions*.
++
+You'll only see the subscriptions that are associated with the account that you're currently viewing.
+
+. Click the action menu in the row that corresponds to the subscription that you want to manage.
++
+image:screenshot_subscription_menu.gif[A screenshot of the action menu for a subscription.]
+
+. Choose to rename the subscription or to manage the accounts that are associated with the subscription.
+
+== Changing the account name
+
+Change you account name at any time to change it to something meaningful for you.
+
+.Steps
+
+. From the top of Cloud Manager, click the *Account* drop-down and click *Manage Account*.
+
+. In the *Overview* tab, click the edit icon next to the account name.
+
+. Type a new account name and click *Save*.
+
+== Enabling or disabling the SaaS platform
+
+We don't recommend disabling the SaaS platform unless you need to in order to comply with your company’s security policies. Disabling the SaaS platform limits your ability to use NetApp’s integrated cloud services.
+
+The following services aren't available from Cloud Manager if you disable the SaaS platform:
+
+*	Cloud Compliance
+*	Kubernetes
+*	Cloud Tiering
+*	Global File Cache
+*	Monitoring (Cloud Insights)
+
+.Steps
+
+. From the top of Cloud Manager, click the *Account* drop-down and click *Manage Account*.
+
+. In the *Overview* tab, toggle the option to enable use the SaaS platform.

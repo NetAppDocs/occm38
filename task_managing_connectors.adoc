@@ -1,0 +1,90 @@
+---
+sidebar: sidebar
+permalink: task_managing_connectors.html
+keywords: managing connectors, uninstall connector, switch connectors, switch between connectors, go to local UI, local interface, local connector, local cloud manager
+summary: After you create one or more Connectors, you can manage them by switching between Connectors, connecting to the local user interface running on a Connector, and more.
+---
+
+= Managing existing Connectors
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+After you create one or more Connectors, you can manage them by switching between Connectors, connecting to the local user interface running on a Connector, and more.
+
+== Switching between Connectors
+
+If you have multiple Connectors, you can switch between them to see the Working Environments that are associated with a specific Connector.
+
+For example, let's say that you're working in a multi-cloud environment. You might have one Connector in AWS and another in Google Cloud. You'd need to switch between those Connectors to manage the Cloud Volumes ONTAP systems running in those clouds.
+
+.Step
+
+. Click the *Connector* drop-down, select another Connector, and then click *Switch*.
++
+image:screenshot_connector_switch.gif[A screenshot that shows the Connector icon in the header and the Switch action.]
++
+Cloud Manager refreshes and shows the Working Environments associated with the selected Connector.
+
+== Accessing the local UI
+
+While you should perform almost all tasks from the SaaS user interface, a local user interface is still available on the Connector. This interface is needed for a few tasks that need to be performed from the Connector itself:
+
+* link:task_configuring_proxy.html[Setting a proxy server]
+* Installing a patch (you'll typically work with NetApp personnel to install a patch)
+* Downloading AutoSupport messages (usually directed by NetApp personnel when you have issues)
+
+.Steps
+
+. https://docs.netapp.com/us-en/occm/task_logging_in.html[Log in to the Cloud Manager SaaS interface^] from a machine that has a network connection to the Connector instance.
++
+If the Connector doesn't have a public IP address, you'll need a VPN connection or you'll need to connect from a jump host that's in the same network as the Connector.
+
+. Click the *Connector* drop-down, click the action menu for a Connector, and then click *Go to Local UI*.
++
+image:screenshot_connector_local_ui.gif[A screenshot that shows the Connector icon in the header and the Go to local UI action.]
++
+The Cloud Manager interface running on the Connector loads in a new browser tab.
+
+== Removing Connectors from Cloud Manager
+
+If a Connector is inactive, you can remove it from the list of Connectors in Cloud Manager. You might do this if you deleted the Connector virtual machine or if you uninstalled the Connector software.
+
+Note the following about removing a Connector:
+
+* This action doesn't delete the virtual machine.
+* This action can't be reverted--once you remove a Connector from Cloud Manager, you can't add it back to Cloud Manager.
+
+.Steps
+
+. Click the Connector drop-down from the Cloud Manager header.
+
+. Click the action menu for an inactive Connector and click *Remove Connector*.
++
+image:screenshot_connector_remove.gif[A screenshot of the Connector widget where you can remove an inactive Connector.]
+
+. Enter the name of the Connector to confirm and then click Remove.
+
+.Result
+
+Cloud Manager removes the Connector from its records.
+
+== Uninstalling the Connector software
+
+The Connector includes an uninstallation script that you can use to uninstall the software to troubleshoot issues or to permanently remove the software from the host.
+
+.Step
+
+. From the Linux host, run the uninstallation script:
++
+*/opt/application/netapp/cloudmanager/bin/uninstall.sh [silent]*
++
+_silent_ runs the script without prompting you for confirmation.
+
+.What about software upgrades?
+****
+The Connector automatically updates its software to the latest version, as long as it has link:reference_networking_cloud_manager.html[outbound internet access] to obtain the software update.
+****

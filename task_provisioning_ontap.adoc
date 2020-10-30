@@ -1,0 +1,81 @@
+---
+sidebar: sidebar
+permalink: task_provisioning_ontap.html
+keywords: ontap, cluster, manage, provision, provisioning, volumes, discovering, fas, aff, creating volumes, adding volumes
+summary: After you discover your on-prem ONTAP cluster from Cloud Manager, you can open the working environment to provision storage.
+---
+
+= Managing storage for ONTAP clusters
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+After you discover your ONTAP cluster from Cloud Manager, you can open the working environment to provision and manage storage.
+
+== Creating volumes for ONTAP clusters
+
+Cloud Manager enables you to provision NFS, CIFS, and iSCSI volumes on ONTAP clusters.
+
+.Before you begin
+
+The data protocols must be set up on the cluster using System Manager or the CLI.
+
+.About this task
+
+You can create volumes on existing aggregates. You can't create new aggregates from Cloud Manager.
+
+.Steps
+
+. On the Working Environments page, double-click the name of the ONTAP cluster on which you want to provision volumes.
+
+. Click *Add New Volume*.
+
+. On the Create New Volume page, enter details for the volume, and then click *Create*.
++
+Some of the fields in this page are self-explanatory. The following table describes fields for which you might need guidance:
++
+[cols=2*,options="header",cols="2,6"]
+|===
+| Field
+| Description
+
+| Size | The maximum size that you can enter largely depends on whether you enable thin provisioning, which enables you to create a volume that is bigger than the physical storage currently available to it.
+
+| Snapshot Policy | A Snapshot copy policy specifies the frequency and number of automatically created NetApp Snapshot copies. A NetApp Snapshot copy is a point-in-time file system image that has no performance impact and requires minimal storage. You can choose the default policy or none. You might choose none for transient data: for example, tempdb for Microsoft SQL Server.
+
+| Access control (for NFS only) | An export policy defines the clients in the subnet that can access the volume. By default, Cloud Manager enters a value that provides access to all instances in the subnet.
+
+| Permissions and Users / Groups (for CIFS only) | These fields enable you to control the level of access to a share for users and groups (also called access control lists or ACLs). You can specify local or domain Windows users or groups, or UNIX users or groups. If you specify a domain Windows user name, you must include the user's domain using the format domain\username.
+
+| Initiator group and IQN (for iSCSI only) |
+iSCSI storage targets are called LUNs (logical units) and are presented to hosts as standard block devices.
+
+Initiator groups are tables of iSCSI host node names and control which initiators have access to which LUNs.
+
+iSCSI targets connect to the network through standard Ethernet network adapters (NICs), TCP offload engine (TOE) cards with software initiators, converged network adapters (CNAs) or dedicated host bust adapters (HBAs) and are identified by iSCSI qualified names (IQNs).
+
+When you create an iSCSI volume, Cloud Manager automatically creates a LUN for you. We’ve made it simple by creating just one LUN per volume, so there’s no management involved. After you create the volume, select it, click Target IQN, and then use the IQN to connect to the LUN from your hosts.
+
+| Usage Profile | Usage profiles define the NetApp storage efficiency features that are enabled for a volume.
+
+|===
+
+== Replicating data
+
+You can replicate data between Cloud Volumes ONTAP systems and ONTAP clusters by choosing a one-time data replication, which can help you move data to and from the cloud, or a recurring schedule, which can help with disaster recovery or long-term retention.
+
+link:task_replicating_data.html[Click here for more details].
+
+== Backing up data
+
+You can back up data from your on-premises ONTAP system to low-cost object storage in the cloud by using the Cloud Manager Backup to Cloud service. This service provides backup and restore capabilities for protection and long-term archive of your cloud data.
+
+link:task_backup_from_ontap.html[Click here for more details].
+
+== Tiering data to the cloud
+
+Extend your data center to the cloud by automatically tiering inactive data from ONTAP clusters to object storage.
+
+link:concept_cloud_tiering.html[Click here for more details].

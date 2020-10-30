@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: task_managing_compliance.html
+keywords: remove, delete, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, delete cloud compliance, terminate, deactivate, deactivating cloud compliance
+summary: If you need to, you can stop Cloud Compliance from scanning one or more working environments. You can also delete the Cloud Compliance instance if you no longer want to use Cloud Compliance with your working environments.
+---
+
+= Disabling Cloud Compliance
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+If you need to, you can stop Cloud Compliance from scanning one or more working environments or databases. You can also delete the Cloud Compliance instance if you no longer want to use Cloud Compliance with your working environments.
+
+== Deactivating compliance scans for a working environment
+
+When you deactivate scans, Cloud Compliance no longer scans the data on the system and it removes the indexed compliance insights from the Cloud Compliance instance (the data from the working environment or database itself isn't deleted).
+
+.Steps
+
+From the _Scan Configuration_ page, click the image:screenshot_gallery_options.gif[More button] button in the row for the working environment, and then click *Deactivate Compliance*.
+
+image:screenshot_deactivate_compliance_scan.png[A screenshot of the action icon where you can select Deactivate scan. This option is available after you select a working environment from the Working Environments page.]
+
+TIP: You can also disable compliance scans for a working environment from the Services panel when you select the working environment.
+
+== Deleting the Cloud Compliance instance
+
+You can delete the Cloud Compliance instance if you no longer want to use Cloud Compliance. Deleting the instance also deletes the associated disks where the indexed data resides.
+
+.Step
+
+. Go to your cloud provider's console and delete the Cloud Compliance instance.
++
+The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
