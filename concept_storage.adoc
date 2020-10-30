@@ -1,0 +1,106 @@
+---
+sidebar: sidebar
+permalink: concept_storage.html
+keywords: storage, capacity, volumes, aggregates, raw capacity, usable capacity, aws, azure
+summary: Understanding how Cloud Volumes ONTAP uses cloud storage can help you understand your storage costs.
+---
+
+= Disks and aggregates
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Understanding how Cloud Volumes ONTAP uses cloud storage can help you understand your storage costs.
+
+IMPORTANT: All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
+
+== Overview
+
+Cloud Volumes ONTAP uses cloud provider storage as disks and groups them into one or more aggregates. Aggregates provide storage to one or more volumes.
+
+image:diagram_storage.png["This illustration shows an aggregate that is comprised of disks, and the data volumes that Cloud Volumes ONTAP makes available to hosts."]
+
+Several types of cloud disks are supported. You choose the disk type when you create a volume and the default disk size when you deploy Cloud Volumes ONTAP.
+
+TIP: The total amount of storage purchased from a cloud provider is the _raw capacity_. The _usable capacity_ is less because approximately 12 to 14 percent is overhead that is reserved for Cloud Volumes ONTAP use. For example, if Cloud Manager creates a 500 GB aggregate, the usable capacity is 442.94 GB.
+
+== AWS storage
+
+In AWS, Cloud Volumes ONTAP uses EBS storage for user data and local NVMe storage as Flash Cache on some EC2 instance types.
+
+EBS storage::
+In AWS, an aggregate can contain up to 6 disks that are all the same size. The maximum disk size is 16 TB.
++
+The underlying EBS disk type can be either General Purpose SSD, Provisioned IOPS SSD, Throughput Optimized HDD, or Cold HDD. You can pair an EBS disk with Amazon S3 to link:concept_data_tiering.html[tier inactive data to low-cost object storage].
++
+At a high level, the differences between EBS disk types are as follows:
+
+* _General Purpose SSD_ disks balance cost and performance for a broad range of workloads. Performance is defined in terms of IOPS.
+
+* _Provisioned IOPS SSD_ disks are for critical applications that require the highest performance at a higher cost.
+
+* _Throughput Optimized HDD_ disks are for frequently accessed workloads that require fast and consistent throughput at a lower price.
+
+* _Cold HDD_ disks are meant for backups, or infrequently accessed data, because the performance is very low. Like Throughput Optimized HDD disks, performance is defined in terms of throughput.
++
+NOTE: Cold HDD disks are not supported with HA configurations and with data tiering.
+
+Local NVMe storage::
+Some EC2 instance types include local NVMe storage, which Cloud Volumes ONTAP uses as link:concept_flash_cache.html[Flash Cache].
+
+*Related links*
+
+* http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html[AWS documentation: EBS Volume Types^]
+
+* link:task_planning_your_config.html[Learn how to choose disk types and disk sizes for your systems in AWS]
+
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_97.html[Review storage limits for Cloud Volumes ONTAP in AWS^]
+
+* http://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_97.html[Review supported configurations for Cloud Volumes ONTAP in AWS^]
+
+== Azure storage
+
+In Azure, an aggregate can contain up to 12 disks that are all the same size. The disk type and maximum disk size depends on whether you use a single node system or an HA pair:
+
+Single node systems::
+Single node systems can use three types of Azure Managed Disks:
+
+* _Premium SSD Managed Disks_ provide high performance for I/O-intensive workloads at a higher cost.
+
+* _Standard SSD Managed Disks_ provide consistent performance for workloads that require low IOPS.
+
+* _Standard HDD Managed Disks_ are a good choice if you don't need high IOPS and want to reduce your costs.
++
+Each managed disk type has a maximum disk size of 32 TB.
++
+You can pair a managed disk with Azure Blob storage to link:concept_data_tiering.html[tier inactive data to low-cost object storage].
+
+HA pairs::
+HA pairs use Premium page blobs, which have a maximum disk size of 8 TB.
+
+*Related links*
+
+* https://azure.microsoft.com/documentation/articles/storage-introduction/[Microsoft Azure documentation: Introduction to Microsoft Azure Storage^]
+
+* link:task_planning_your_config_azure.html[Learn how to choose disk types and disk sizes for your systems in Azure]
+
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_azure_97.html[Review storage limits for Cloud Volumes ONTAP in Azure^]
+
+== GCP storage
+
+In GCP, an aggregate can contain up to 6 disks that are all the same size. The maximum disk size is 16 TB.
+
+The disk type can be either _Zonal SSD persistent disks_ or _Zonal standard persistent disks_. You can pair persistent disks with a Google Storage bucket to link:concept_data_tiering.html[tier inactive data to low-cost object storage].
+
+*Related links*
+
+* https://cloud.google.com/compute/docs/disks/[Google Cloud Platform documentation: Storage Options^]
+
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_gcp_97.html[Review storage limits for Cloud Volumes ONTAP in GCP^]
+
+== RAID type
+
+The RAID type for each Cloud Volumes ONTAP aggregate is RAID0 (striping). No other RAID types are supported. Cloud Volumes ONTAP relies on the cloud provider for disk availability and durability.

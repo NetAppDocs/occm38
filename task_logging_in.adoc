@@ -1,0 +1,24 @@
+---
+sidebar: sidebar
+permalink: task_logging_in.html
+keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account
+summary: The Cloud Manager interface is accessible through a SaaS-based user interface by going to https://cloudmanager.netapp.com.
+---
+
+= Logging in to Cloud Manager
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Cloud Manager interface is accessible through a SaaS-based user interface by going to https://cloudmanager.netapp.com.
+
+.Steps
+
+. Open a web browser and go to https://cloudmanager.netapp.com.
+
+. Log in using your NetApp Cloud Central credentials.
++
+image:screenshot_login.gif[The log in screen for Cloud Central.]

@@ -1,0 +1,135 @@
+---
+sidebar: sidebar
+permalink: faq_cloud_tiering.html
+keywords: faq, questions, requirements, service connector, object store, object storage, aws, azure, bucket, cluster, aggregate, s3, storage class, standard, inactive data reporting, auto, volume tiering policy, policy, tiering policy, snapshot, cold, inactive, infrequent
+summary: This FAQ can help if you're just looking for a quick answer to a question.
+---
+
+= Cloud Tiering technical FAQ
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+This FAQ can help if you're just looking for a quick answer to a question.
+
+== ONTAP
+
+The following questions relate to ONTAP.
+
+=== What are the requirements for my ONTAP cluster?
+
+It depends on where you tier the cold data. Refer to the following:
+
+* link:task_tiering_onprem_aws.html#preparing-your-ontap-clusters[Tiering data from on-premises ONTAP clusters to Amazon S3]
+* link:task_tiering_onprem_azure.html#preparing-your-ontap-clusters[Tiering data from on-premises ONTAP clusters to Azure Blob storage]
+* link:task_tiering_onprem_gcp.html#preparing-your-ontap-clusters[Tiering data from on-premises ONTAP clusters to Google Cloud Storage]
+* link:task_tiering_onprem_storagegrid.html#preparing-your-ontap-clusters[Tiering data from on-premises ONTAP clusters to StorageGRID]
+
+=== Does Cloud Tiering enable inactive data reporting?
+
+Yes, Cloud Tiering enables inactive data reporting on each aggregate. This setting enables us to identify the amount of inactive data that can be tiered to low-cost object storage.
+
+=== Can I tier data from NAS volumes and SAN volumes?
+
+You can use Cloud Tiering to tier data from NAS volumes to the public cloud and from SAN volumes to a private cloud using StorageGRID.
+
+=== What about Cloud Volumes ONTAP?
+
+If you have Cloud Volumes ONTAP systems, you'll find them in the Cluster Dashboard so you see a full view of data tiering in your hybrid cloud infrastructure.
+
+From the Cluster Dashboard, you can view tiering information similar to an on-prem ONTAP cluster: operational health, current savings, savings opportunities, details about volumes and aggregates, and more.
+
+Cloud Volumes ONTAP systems are read-only from Cloud Tiering. You can't set up data tiering on Cloud Volumes ONTAP from Cloud Tiering. You'll still set up tiering the same way: from the working environment in Cloud Manager.
+
+== Object storage
+
+The following questions relate to object storage.
+
+=== Which object storage providers are supported?
+
+Amazon S3, Azure Blob storage, Google Cloud Storage, and StorageGRID using the S3 protocol are supported.
+
+=== Can I use my own bucket/container?
+
+Yes, you can. When you set up data tiering, you have the choice to add a new bucket/container or to select an existing bucket/container.
+
+=== Which regions are supported?
+
+* link:reference_aws_support.html[Supported AWS regions]
+* link:reference_azure_support.html[Supported Azure regions]
+* link:reference_google_support.html[Supported Google Cloud regions]
+
+=== Which S3 storage classes are supported?
+
+Cloud Tiering supports data tiering to the _Standard_, _Standard-Infrequent Access_, _One Zone-IA_, or _Intelligent_ storage class. See link:reference_aws_support.html[Supported S3 storage classes] for more details.
+
+=== Which Azure Blob access tiers are supported?
+
+Cloud Tiering automatically uses the _Hot_ access tier for your inactive data.
+
+=== Which storage classes are supported for Google Cloud Storage?
+
+Cloud Tiering uses the _Standard_ storage class for inactive data.
+
+=== Does Cloud Tiering use one object store for the entire cluster or one per aggregate?
+
+One object store for the entire cluster.
+
+=== Can I apply policies to my object store to move data around independent of tiering?
+
+No, Cloud Tiering does not support object lifecycle management rules that move or delete data from object stores.
+
+== Connectors
+
+The following questions relate to Connectors.
+
+=== Where does the Connector need to be installed?
+
+* When tiering data to S3, a Connector can reside in an AWS VPC or on your premises.
+* When tiering data to Blob storage, a Connector must reside in an Azure VNet.
+* When tiering data to Google Cloud Storage, a Connector must reside in a Google Cloud Platform VPC.
+* When tiering data to StorageGRID, a Connector must reside on an on premises Linux host.
+
+== Networking
+
+The following questions relate to networking.
+
+=== What are the networking requirements?
+
+* The ONTAP cluster initiates an HTTPS connection over port 443 to your object storage provider.
++
+ONTAP reads and writes data to and from object storage. The object storage never initiates, it just responds.
+
+* For StorageGRID, the ONTAP cluster initiates an HTTPS connection over a user-specified port to StorageGRID (the port is configurable during tiering setup).
+
+* A Connector needs an outbound HTTPS connection over port 443 to your ONTAP clusters, to the object store, and to the Cloud Tiering service.
+
+For more details, see:
+
+* link:task_tiering_onprem_aws.html[Tiering data from on-premises ONTAP clusters to Amazon S3]
+* link:task_tiering_onprem_azure.html[Tiering data from on-premises ONTAP clusters to Azure Blob storage]
+* link:task_tiering_onprem_gcp.html[Tiering data from on-premises ONTAP clusters to Google Cloud Storage]
+* link:task_tiering_onprem_storagegrid.html[Tiering data from on-premises ONTAP clusters to StorageGRID]
+
+== Permissions
+
+The following questions relate to permissions.
+
+=== What permissions are required in AWS?
+
+Permissions are required link:task_tiering_onprem_aws#preparing-amazon-s3[to manage the S3 bucket].
+
+=== What permissions are required in Azure?
+
+No extra permissions are needed outside of the permissions that you need to provide to Cloud Manager.
+
+=== What permissions are required in Google Cloud Platform?
+
+Storage Admin permissions are needed for a service account that has storage access keys.
+
+=== What permissions are required for StorageGRID?
+
+link:task_tiering_onprem_storagegrid.html#preparing-storagegrid[S3 permissions are needed].
