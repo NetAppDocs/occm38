@@ -1,0 +1,5039 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>Gaining visibility and control of private data</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Gaining visibility and control of private data" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/occm38/task_controlling_private_data.html" />
+	<meta property="og:description" content="Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility b..." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/occm38/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta http-equiv="nss-product" content="OnCommand Cloud Manager"/><meta name="description" content="Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility b...">
+  <meta name="keywords" content=" personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy"><!-- Icons -->
+  <link rel="icon" href="/us-en/occm38/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/us-en/occm38/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/us-en/occm38/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/us-en/occm38/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/us-en/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/occm38/task_controlling_private_data.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/occm38/task_controlling_private_data.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/occm38/js/na-search.js'></script><script src='/us-en/occm38/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/us-en/occm38/js/custom-dropdown.js'></script>
+  <script src='/us-en/occm38/js/FileSaver.min.js'></script>
+  <script src='/us-en/occm38/js/jszip-utils.min.js'></script>
+  <script src='/us-en/occm38/js/jszip.min.js'></script><script src='/us-en/occm38/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/us-en/occm38/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/">
+                <image id="ie-header-logo" src="/us-en/occm38/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">Docs</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/us-en/occm38/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">English</span>
+                    <img src="/us-en/occm38/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/us-en/occm38/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/us-en/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/occm38/task_controlling_private_data.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/us-en/occm38/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">All NetApp</span>
+                    <img src="/us-en/occm38/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/us-en/occm38/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">Support</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">Knowledge Base</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">Training</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/us-en/occm38/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/us-en/occm38/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">All docs</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/us-en/occm38/">-->
+      Cloud Manager 3.8
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/us-en/occm38/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/us-en/occm38/search.html" 
+        data-type="widget"
+        data-placeholder="Search documentation"
+        data-no-results-found="No results were found for {query}"
+        data-did-you-mean="Search for {suggestion}."
+        data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?"
+        data-results-found="{hitCount} results found"
+        data-error-message="An error occurred. Please try again."
+        data-error-reset="Reset search"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Manager docs"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/occm38/index.html">
+        Cloud Manager docs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Release notes"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Release notes</div>-->
+         Release notes
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Manager"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Cloud Manager</div>-->
+         Cloud Manager
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="What's new"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_new_occm.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_new_occm.html">
+        What's new
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Transition to SaaS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_saas.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_saas.html">
+        Transition to SaaS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Known issues"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_issues.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_issues.html">
+        Known issues
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Known limitations"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_limitations.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_limitations.html">
+        Known limitations
+      </a></li></ul></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Cloud Volumes ONTAP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="https://docs.netapp.com/us-en/cloud-volumes-ontap/" 
+    ><a class="ie-sidebar-menuitem-2 " href="https://docs.netapp.com/us-en/cloud-volumes-ontap/">
+        Cloud Volumes ONTAP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Important changes"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_key_changes.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/occm38/reference_key_changes.html">
+        Important changes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started with Cloud Manager"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started with Cloud Manager</div>-->
+         Get started with Cloud Manager
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Cloud Manager"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_overview.html">
+        Learn about Cloud Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Networking overview"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_networking.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/reference_networking.html">
+        Networking overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sign up to Cloud Central"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_signing_up.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_signing_up.html">
+        Sign up to Cloud Central
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Log in to Cloud Manager"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_logging_in.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_logging_in.html">
+        Log in to Cloud Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up a Cloud Central account"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Set up a Cloud Central account</div>-->
+         Set up a Cloud Central account
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Cloud Central accounts"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_cloud_central_accounts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_cloud_central_accounts.html">
+        Learn about Cloud Central accounts
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up an account"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_setting_up_cloud_central_accounts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_setting_up_cloud_central_accounts.html">
+        Set up an account
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up a Connector"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Set up a Connector</div>-->
+         Set up a Connector
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Connectors"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_connectors.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_connectors.html">
+        Learn about Connectors
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Networking requirements"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_networking_cloud_manager.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_networking_cloud_manager.html">
+        Networking requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create a Connector in AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_creating_connectors_aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_creating_connectors_aws.html">
+        Create a Connector in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create a Connector in Azure"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_creating_connectors_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_creating_connectors_azure.html">
+        Create a Connector in Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create a Connector in GCP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_creating_connectors_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_creating_connectors_gcp.html">
+        Create a Connector in GCP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Where to go next"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_whats_next.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/reference_whats_next.html">
+        Where to go next
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage Cloud Volumes ONTAP"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manage Cloud Volumes ONTAP</div>-->
+         Manage Cloud Volumes ONTAP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Learn</div>-->
+         Learn
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Overview"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_overview_cvo.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_overview_cvo.html">
+        Overview
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Storage</div>-->
+         Storage
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disks and aggregates"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_storage.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_storage.html">
+        Disks and aggregates
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Data tiering"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_data_tiering.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_data_tiering.html">
+        Data tiering
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage management"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_storage_management.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_storage_management.html">
+        Storage management
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flash Cache"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_flash_cache.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_flash_cache.html">
+        Flash Cache
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="WORM storage"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_worm.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_worm.html">
+        WORM storage
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="High-availability pairs"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> High-availability pairs</div>-->
+         High-availability pairs
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HA pairs in AWS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_ha.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_ha.html">
+        HA pairs in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HA pairs in Azure"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_ha_azure.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_ha_azure.html">
+        HA pairs in Azure
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Evaluating"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_evaluating.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_evaluating.html">
+        Evaluating
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Licensing"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_licensing.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_licensing.html">
+        Licensing
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_security.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_security.html">
+        Security
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Performance"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_performance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_performance.html">
+        Performance
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Supported configurations"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="https://docs.netapp.com/us-en/cloud-volumes-ontap/index.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="https://docs.netapp.com/us-en/cloud-volumes-ontap/index.html">
+        Supported configurations
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Supported regions"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="https://cloud.netapp.com/cloud-volumes-global-regions" 
+    ><a class="ie-sidebar-menuitem-3 " href="https://cloud.netapp.com/cloud-volumes-global-regions">
+        Supported regions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Default configuration"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_default_configs.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_default_configs.html">
+        Default configuration
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started in AWS"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started in AWS</div>-->
+         Get started in AWS
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Quick start"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_getting_started_aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_getting_started_aws.html">
+        Quick start
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plan your configuration"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_planning_your_config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_planning_your_config.html">
+        Plan your configuration
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up your networking"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Set up your networking</div>-->
+         Set up your networking
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Networking requirements"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_networking_aws.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/reference_networking_aws.html">
+        Networking requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up an AWS transit gateway"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_setting_up_transit_gateway.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_setting_up_transit_gateway.html">
+        Set up an AWS transit gateway
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Security group rules for AWS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_security_groups.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/reference_security_groups.html">
+        Security group rules for AWS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up the AWS KMS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_setting_up_kms.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_setting_up_kms.html">
+        Set up the AWS KMS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Launch a system in AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_deploying_otc_aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_deploying_otc_aws.html">
+        Launch a system in AWS
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Get started in AWS C2S"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="https://docs.netapp.com/us-en/occm/media/c2s.pdf" 
+    ><a class="ie-sidebar-menuitem-3 " href="https://docs.netapp.com/us-en/occm/media/c2s.pdf">
+        Get started in AWS C2S
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started in Azure"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started in Azure</div>-->
+         Get started in Azure
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Quick start"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_getting_started_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_getting_started_azure.html">
+        Quick start
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plan your configuration"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_planning_your_config_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_planning_your_config_azure.html">
+        Plan your configuration
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up your networking"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_networking_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_networking_azure.html">
+        Set up your networking
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Launch a system in Azure"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_deploying_otc_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_deploying_otc_azure.html">
+        Launch a system in Azure
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started in GCP"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started in GCP</div>-->
+         Get started in GCP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Quick start"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_getting_started_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_getting_started_gcp.html">
+        Quick start
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plan your configuration"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_planning_your_config_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_planning_your_config_gcp.html">
+        Plan your configuration
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up your networking"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_networking_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_networking_gcp.html">
+        Set up your networking
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use customer-managed encryption keys"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_setting_up_gcp_encryption.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_setting_up_gcp_encryption.html">
+        Use customer-managed encryption keys
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Launch a system in GCP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_deploying_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_deploying_gcp.html">
+        Launch a system in GCP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Provision and manage storage"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Provision and manage storage</div>-->
+         Provision and manage storage
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create volumes, aggregates, and LUNs"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_provisioning_storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_provisioning_storage.html">
+        Create volumes, aggregates, and LUNs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage volumes and aggregates"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_storage.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_managing_storage.html">
+        Manage volumes and aggregates
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tier inactive data to object storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_tiering.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_tiering.html">
+        Tier inactive data to object storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage storage VMs"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_svms.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_managing_svms.html">
+        Manage storage VMs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use ONTAP as persistent storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_connecting_kubernetes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_connecting_kubernetes.html">
+        Use ONTAP as persistent storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Encrypt volumes with NetApp encryption"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_encrypting_volumes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_encrypting_volumes.html">
+        Encrypt volumes with NetApp encryption
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replicate data"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_replicating_data.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_replicating_data.html">
+        Replicate data
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor performance"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Monitor performance</div>-->
+         Monitor performance
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Monitoring"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_monitoring.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_monitoring.html">
+        Learn about Monitoring
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_getting_started_monitoring.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_getting_started_monitoring.html">
+        Get started
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Improve ransomware protection"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_protecting_ransomware.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_protecting_ransomware.html">
+        Improve ransomware protection
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Administer"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Administer</div>-->
+         Administer
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Register pay-as-you-go systems"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_registering.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_registering.html">
+        Register pay-as-you-go systems
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up Cloud Volumes ONTAP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_setting_up_ontap_cloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_setting_up_ontap_cloud.html">
+        Set up Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage BYOL licenses"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_licenses.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_managing_licenses.html">
+        Manage BYOL licenses
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Update software"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_updating_ontap_cloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_updating_ontap_cloud.html">
+        Update software
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modify system configurations"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_modifying_ontap_cloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_modifying_ontap_cloud.html">
+        Modify system configurations
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Stop and start systems"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_state.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_managing_state.html">
+        Stop and start systems
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitor AWS costs"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_monitoring_costs.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_monitoring_costs.html">
+        Monitor AWS costs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Connect to Cloud Volumes ONTAP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_connecting_to_otc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_connecting_to_otc.html">
+        Connect to Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Add existing systems"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_adding_ontap_cloud.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_adding_ontap_cloud.html">
+        Add existing systems
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Delete systems"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_deleting_working_env.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_deleting_working_env.html">
+        Delete systems
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Provision volumes using a file service"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Provision volumes using a file service</div>-->
+         Provision volumes using a file service
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure NetApp Files"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Azure NetApp Files</div>-->
+         Azure NetApp Files
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Azure NetApp Files"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_azure_netapp_files.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_azure_netapp_files.html">
+        Learn about Azure NetApp Files
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up Azure NetApp Files"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_manage_anf.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_manage_anf.html">
+        Set up Azure NetApp Files
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create and manage volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_manage_anf_volumes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_manage_anf_volumes.html">
+        Create and manage volumes
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes Service for AWS"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Cloud Volumes Service for AWS</div>-->
+         Cloud Volumes Service for AWS
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Cloud Volumes Service for AWS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_cvs_aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_cvs_aws.html">
+        Learn about Cloud Volumes Service for AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy and manage cloud volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_manage_cvs_aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_manage_cvs_aws.html">
+        Deploy and manage cloud volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage cloud volumes snapshots"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_manage_cloud_volumes_snapshots.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_manage_cloud_volumes_snapshots.html">
+        Manage cloud volumes snapshots
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reference"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Reference</div>-->
+         Reference
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Service levels and allocated capacity"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_cvs_service_levels_and_quotas.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/reference_cvs_service_levels_and_quotas.html">
+        Service levels and allocated capacity
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS security group settings for Windows AD servers"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_security_groups_windows_ad_servers.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/reference_security_groups_windows_ad_servers.html">
+        AWS security group settings for Windows AD servers
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes Service for GCP"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Cloud Volumes Service for GCP</div>-->
+         Cloud Volumes Service for GCP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Cloud Volumes Service for GCP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_cvs_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/concept_cvs_gcp.html">
+        Learn about Cloud Volumes Service for GCP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up Cloud Volumes Service for GCP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_setup_cvs_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_setup_cvs_gcp.html">
+        Set up Cloud Volumes Service for GCP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create and manage cloud volumes"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_manage_cvs_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_manage_cvs_gcp.html">
+        Create and manage cloud volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage cloud volumes snapshots"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_manage_cloud_volumes_gcp_snapshots.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_manage_cloud_volumes_gcp_snapshots.html">
+        Manage cloud volumes snapshots
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage ONTAP clusters"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manage ONTAP clusters</div>-->
+         Manage ONTAP clusters
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Discover ONTAP clusters"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_discovering_ontap.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_discovering_ontap.html">
+        Discover ONTAP clusters
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage ONTAP volumes"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_provisioning_ontap.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_provisioning_ontap.html">
+        Manage ONTAP volumes
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Back up to the cloud"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Back up to the cloud</div>-->
+         Back up to the cloud
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Backup to Cloud"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_backup_to_cloud.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_backup_to_cloud.html">
+        Learn about Backup to Cloud
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started</div>-->
+         Get started
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Back up to Amazon S3"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_backup_to_s3.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_backup_to_s3.html">
+        Back up to Amazon S3
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Back up to Azure Blob storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_backup_to_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_backup_to_azure.html">
+        Back up to Azure Blob storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Back up from on-premises ONTAP systems"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_backup_from_onprem.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_backup_from_onprem.html">
+        Back up from on-premises ONTAP systems
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage backups and restore data"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_backups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_managing_backups.html">
+        Manage backups and restore data
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Copy and synchronize data"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Copy and synchronize data</div>-->
+         Copy and synchronize data
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Cloud Sync"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_cloud_sync.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_cloud_sync.html">
+        Learn about Cloud Sync
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started</div>-->
+         Get started
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Quick start"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_quick_start.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_sync_quick_start.html">
+        Quick start
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare the source and target"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_sync_requirements.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_sync_requirements.html">
+        Prepare the source and target
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare networking"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_sync_networking.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_sync_networking.html">
+        Prepare networking
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="How to install a data broker"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> How to install a data broker</div>-->
+         How to install a data broker
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install in AWS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_installing_aws.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_sync_installing_aws.html">
+        Install in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install in Azure"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_installing_azure.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_sync_installing_azure.html">
+        Install in Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install in GCP"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_installing_gcp.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_sync_installing_gcp.html">
+        Install in GCP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install on a Linux host"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_installing_linux.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_sync_installing_linux.html">
+        Install on a Linux host
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create a sync relationship"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_creating_relationships.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_sync_creating_relationships.html">
+        Create a sync relationship
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Pay for sync relationships"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_licensing.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_sync_licensing.html">
+        Pay for sync relationships
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tutorials"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Tutorials</div>-->
+         Tutorials
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Copy ACLs between shares"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_copying_acls.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_sync_copying_acls.html">
+        Copy ACLs between shares
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Encrypt NFS data in flight"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_nfs_encryption.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_sync_nfs_encryption.html">
+        Encrypt NFS data in flight
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage sync relationships"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_sync_managing_relationships.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_sync_managing_relationships.html">
+        Manage sync relationships
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="API"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/api_sync.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/api_sync.html">
+        API
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FAQ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/faq_sync.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/faq_sync.html">
+        FAQ
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gain insight into data privacy"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Gain insight into data privacy</div>-->
+         Gain insight into data privacy
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Cloud Compliance"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_cloud_compliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_cloud_compliance.html">
+        Learn about Cloud Compliance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started</div>-->
+         Get started
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy Cloud Compliance"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_deploy_cloud_compliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_deploy_cloud_compliance.html">
+        Deploy Cloud Compliance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Activate scanning on your data sources"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Activate scanning on your data sources</div>-->
+         Activate scanning on your data sources
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP and Azure NetApp Files"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_getting_started_compliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_getting_started_compliance.html">
+        Cloud Volumes ONTAP and Azure NetApp Files
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amazon S3 buckets"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_scanning_s3.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_scanning_s3.html">
+        Amazon S3 buckets
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Database schemas"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_scanning_databases.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_scanning_databases.html">
+        Database schemas
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="On-premises ONTAP data"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_scanning_onprem.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_scanning_onprem.html">
+        On-premises ONTAP data
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gain visibility and control of data"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_controlling_private_data.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_controlling_private_data.html">
+        Gain visibility and control of data
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Generate reports"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_generating_compliance_reports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_generating_compliance_reports.html">
+        Generate reports
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Respond to a DSAR"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_responding_to_dsar.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_responding_to_dsar.html">
+        Respond to a DSAR
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disable Cloud Compliance"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_compliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_managing_compliance.html">
+        Disable Cloud Compliance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FAQ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/faq_cloud_compliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/faq_cloud_compliance.html">
+        FAQ
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Enable real-time global file sharing"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Enable real-time global file sharing</div>-->
+         Enable real-time global file sharing
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Global File Cache"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_gfc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_gfc.html">
+        Learn about Global File Cache
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Before you begin to deploy Global File Cache"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_before_you_begin_to_deploy_gfc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_before_you_begin_to_deploy_gfc.html">
+        Before you begin to deploy Global File Cache
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Getting started"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_gfc_getting_started.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_gfc_getting_started.html">
+        Getting started
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Before you begin to deploy Global File Cache Edge"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/download_gfc_resources.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/download_gfc_resources.html">
+        Before you begin to deploy Global File Cache Edge
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Deploy Global File Cache Edge"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_deploy_gfc_edge_instances.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_deploy_gfc_edge_instances.html">
+        Deploy Global File Cache Edge
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="End-user training"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_gfc_enduser_training.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_gfc_enduser_training.html">
+        End-user training
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Additional information"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_gfc_additional_information.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/reference_gfc_additional_information.html">
+        Additional information
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Optimize cloud compute costs"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Optimize cloud compute costs</div>-->
+         Optimize cloud compute costs
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about the Compute service"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_compute.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_compute.html">
+        Learn about the Compute service
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_getting_started_compute.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_getting_started_compute.html">
+        Get started
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tier data to the cloud"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Tier data to the cloud</div>-->
+         Tier data to the cloud
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Cloud Tiering"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_cloud_tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/concept_cloud_tiering.html">
+        Learn about Cloud Tiering
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Get started</div>-->
+         Get started
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tier data to Amazon S3"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_tiering_onprem_aws.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_tiering_onprem_aws.html">
+        Tier data to Amazon S3
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tier data to Azure Blob storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_tiering_onprem_azure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_tiering_onprem_azure.html">
+        Tier data to Azure Blob storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tier data to Google Cloud Storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_tiering_onprem_gcp.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_tiering_onprem_gcp.html">
+        Tier data to Google Cloud Storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tier data to StorageGRID"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_tiering_onprem_storagegrid.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_tiering_onprem_storagegrid.html">
+        Tier data to StorageGRID
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Set up licensing"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_licensing_cloud_tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_licensing_cloud_tiering.html">
+        Set up licensing
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage data tiering"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_managing_tiering.html">
+        Manage data tiering
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FAQ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/faq_cloud_tiering.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/faq_cloud_tiering.html">
+        FAQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reference"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Reference</div>-->
+         Reference
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Supported Amazon S3 storage classes and regions"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_aws_support.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_aws_support.html">
+        Supported Amazon S3 storage classes and regions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Supported Azure access tiers and regions"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_azure_support.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_azure_support.html">
+        Supported Azure access tiers and regions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Supported Google Cloud storage classes and regions"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_google_support.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_google_support.html">
+        Supported Google Cloud storage classes and regions
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="View Amazon S3 buckets"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_viewing_amazon_s3.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/occm38/task_viewing_amazon_s3.html">
+        View Amazon S3 buckets
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Administer Cloud Manager"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Administer Cloud Manager</div>-->
+         Administer Cloud Manager
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Find your system ID"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_finding_system_id.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_finding_system_id.html">
+        Find your system ID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage Connectors"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manage Connectors</div>-->
+         Manage Connectors
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage existing Connectors"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_connectors.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_managing_connectors.html">
+        Manage existing Connectors
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="More ways to create Connectors"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> More ways to create Connectors</div>-->
+         More ways to create Connectors
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Connector host requirements"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_cloud_mgr_reqs.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/reference_cloud_mgr_reqs.html">
+        Connector host requirements
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create from the AWS Marketplace"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_launching_aws_mktp.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_launching_aws_mktp.html">
+        Create from the AWS Marketplace
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create from the Azure Marketplace"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_launching_azure_mktp.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_launching_azure_mktp.html">
+        Create from the Azure Marketplace
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manually install the software"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_installing_linux.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_installing_linux.html">
+        Manually install the software
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Default configuration"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_connector_default_config.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_connector_default_config.html">
+        Default configuration
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage credentials"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manage credentials</div>-->
+         Manage credentials
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> AWS</div>-->
+         AWS
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about AWS credentials"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_accounts_aws.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_accounts_aws.html">
+        Learn about AWS credentials
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage AWS credentials"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_adding_aws_accounts.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_adding_aws_accounts.html">
+        Manage AWS credentials
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Azure</div>-->
+         Azure
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about Azure credentials"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_accounts_azure.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_accounts_azure.html">
+        Learn about Azure credentials
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage Azure credentials"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_adding_azure_accounts.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_adding_azure_accounts.html">
+        Manage Azure credentials
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="GCP"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> GCP</div>-->
+         GCP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Learn about GCP credentials"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/concept_accounts_gcp.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/concept_accounts_gcp.html">
+        Learn about GCP credentials
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage GCP credentials"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_adding_gcp_accounts.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/us-en/occm38/task_adding_gcp_accounts.html">
+        Manage GCP credentials
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Support Site credentials"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_adding_nss_accounts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/task_adding_nss_accounts.html">
+        NetApp Support Site credentials
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manage your account"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_managing_cloud_central_accounts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_managing_cloud_central_accounts.html">
+        Manage your account
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install an HTTPS certificate"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_installing_https_cert.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_installing_https_cert.html">
+        Install an HTTPS certificate
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Remove working environments"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_removing.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_removing.html">
+        Remove working environments
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure proxy settings"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_configuring_proxy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_configuring_proxy.html">
+        Configure proxy settings
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Override CIFS locks in Azure"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/task_overriding_cifs_locks.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/task_overriding_cifs_locks.html">
+        Override CIFS locks in Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reference"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Reference</div>-->
+         Reference
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="User roles"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_user_roles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_user_roles.html">
+        User roles
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Permissions"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_permissions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_permissions.html">
+        Permissions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS Marketplace pages"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_aws_marketplace.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/us-en/occm38/reference_aws_marketplace.html">
+        AWS Marketplace pages
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Use APIs and automation"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/us-en/occm38/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/us-en/occm38/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Use APIs and automation</div>-->
+         Use APIs and automation
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="false" 
+      data-pdf-filename="API Developer Guide"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="https://docs.netapp.com/us-en/occm/api.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="https://docs.netapp.com/us-en/occm/api.html">
+        API Developer Guide
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Automate using DevOps tools"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_infrastructure_as_code.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/us-en/occm38/reference_infrastructure_as_code.html">
+        Automate using DevOps tools
+      </a></li></ul></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Troubleshoot issues"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services" 
+    ><a class="ie-sidebar-menuitem-1 " href="https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services">
+        Troubleshoot issues
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Related links"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_additional_info.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/occm38/reference_additional_info.html">
+        Related links
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Earlier versions"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_earlier_versions.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/occm38/reference_earlier_versions.html">
+        Earlier versions
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Legal notices"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_controlling_private_data.html" 
+      dale-entry-url="/reference_legal_notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/us-en/occm38/reference_legal_notices.html">
+        Legal notices
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/us-en/occm38"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/us-en/occm38"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      
+  <div class="ie-info-disclaimer" id="downlevel-banner">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/us-en/occm38/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span>A newer release of this product is available.</span><br>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div>
+<div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">Gaining visibility and control of private data</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2020-10-30 18:49:22 +0000">10/30/2020</time>
+        
+    
+    
+        <span>Contributors
+            <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-bcammett"><img  class="avatar avatar-small" alt="netapp-bcammett" width="20" height="20" src="https://avatars.githubusercontent.com/u/18287750?v=4" style="border-radius: 50%;"/></a>
+        
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/us-en/occm38/images/discuss-sm.svg" alt="" class="github-icon" />Suggest changes</span>
+        <img src="/us-en/occm38/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/us-en/occm38/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/occm38/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/us-en/occm38/task_controlling_private_data.html&page-title=Gaining visibility and control of private data" class="page-nav-contribute-link" role="button">Request doc changes</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/occm38/blob/main/task_controlling_private_data.adoc" class="page-nav-contribute-link" role="button">Edit this page</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Learn how to contribute</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>PDFs<img src="/us-en/occm38/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/us-en/occm38/pdfs/fullsite-sidebar/Cloud_Manager_and_Cloud_Volumes_ONTAP_documentation.pdf" >
+                    <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>PDF of this doc site</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Release_notes.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Release notes
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Cloud_Manager.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Cloud Manager
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Get_started_with_Cloud_Manager.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started with Cloud Manager
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Set_up_a_Cloud_Central_account.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Set up a Cloud Central account
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Set_up_a_Connector.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Set up a Connector
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Manage_Cloud_Volumes_ONTAP.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manage Cloud Volumes ONTAP
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Learn.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Learn
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Storage.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Storage
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/High_availability_pairs.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            High-availability pairs
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Get_started_in_AWS.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started in AWS
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Set_up_your_networking.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Set up your networking
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Get_started_in_Azure.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started in Azure
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Get_started_in_GCP.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started in GCP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Provision_and_manage_storage.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Provision and manage storage
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Monitor_performance.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Monitor performance
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Administer.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Administer
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Provision_volumes_using_a_file_service.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Provision volumes using a file service
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Azure_NetApp_Files.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Azure NetApp Files
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Cloud_Volumes_Service_for_AWS.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Cloud Volumes Service for AWS
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Reference.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Reference
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Cloud_Volumes_Service_for_GCP.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Cloud Volumes Service for GCP
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Manage_ONTAP_clusters.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manage ONTAP clusters
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Back_up_to_the_cloud.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Back up to the cloud
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Get_started.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Copy_and_synchronize_data.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Copy and synchronize data
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Get_started.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/How_to_install_a_data_broker.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            How to install a data broker
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Tutorials.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Tutorials
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Gain_insight_into_data_privacy.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Gain insight into data privacy
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Get_started.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Activate_scanning_on_your_data_sources.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Activate scanning on your data sources
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Enable_real_time_global_file_sharing.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Enable real-time global file sharing
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Optimize_cloud_compute_costs.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Optimize cloud compute costs
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Tier_data_to_the_cloud.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Tier data to the cloud
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Get_started.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Get started
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Reference.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Reference
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Administer_Cloud_Manager.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Administer Cloud Manager
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Manage_Connectors.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manage Connectors
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/More_ways_to_create_Connectors.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            More ways to create Connectors
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Manage_credentials.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manage credentials
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/AWS.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            AWS
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Azure.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Azure
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/GCP.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            GCP
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Reference.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Reference
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/us-en/occm38/pdfs/sidebar/Use_APIs_and_automation.pdf" 
+            
+          >
+            <img src="/us-en/occm38/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Use APIs and automation
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/us-en/occm38/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>Collection of separate PDF docs<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility by reviewing the categories and file types that Cloud Compliance found in your data.</p>
+</div>
+<div class="paragraph">
+<p>By default, the Cloud Compliance dashboard displays compliance data for all working environments and databases.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_compliance_dashboard.png" alt="A screenshot of the Cloud Compliance dashboard"></span></p>
+</div>
+<div class="paragraph">
+<p>If you want to see data for only some of the working environments, <a href="#viewing-data-from-specific-working-environments">select those working environments</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="personal-data">Personal data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Compliance automatically identifies specific words, strings, and patterns (Regex) inside the data. For example, Personal Identification Information (PII), credit card numbers, social security numbers, bank account numbers, and more. <a href="#types-of-personal-data">See the full list</a>.</p>
+</div>
+<div class="paragraph">
+<p>For some types of personal data, Cloud Compliance uses <em>proximity validation</em> to validate its findings. The validation occurs by looking for one or more predefined keywords in proximity to the personal data that was found. For example, Cloud Compliance identifies a U.S. social security number (SSN) as a SSN if it sees a proximity word next to it&#8212;&#8203;for example, <em>SSN</em> or <em>social security</em>. <a href="#types-of-personal-data">The list below</a> shows when Cloud Compliance uses proximity validation.</p>
+</div>
+<div class="sect2">
+<h3 id="viewing-files-that-contain-personal-data">Viewing files that contain personal data</h3>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>At the top of Cloud Manager, click <strong>Cloud Compliance</strong> and click the <strong>Dashboard</strong> tab.</p>
+</li>
+<li>
+<p>To investigate the details for all personal data, click the icon next to the personal data percentage.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_compliance_personal.gif" alt="A screenshot of selecting the personal data percentage."></span></p>
+</div>
+</li>
+<li>
+<p>To investigate the details for a specific type of personal data, click <strong>View All</strong> and then click the <strong>Investigate Results</strong> icon for a specific type of personal data.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_personal_files.gif" alt="A screenshot of the personal files dialog box where you can click the Investigate Results icon next to a personal data type."></span></p>
+</div>
+</li>
+<li>
+<p>Investigate the data by searching, sorting, expanding details for a specific file, clicking <strong>Investigate Results</strong> to see masked information, or by downloading the file list.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_compliance_investigation_page.gif" alt="A screenshot of details information after clicking Investigate Results."></span></p>
+</div>
+</li>
+<li>
+<p>You can also filter the contents of the investigation page to display only the results you want to see. The top-level tabs allow you to view data from files (unstructured data) or from databases (structured data).</p>
+<div class="paragraph">
+<p>Then you have filters for working environment, storage repository, category, private data, file type, last modified date, and whether the S3 object's permissions are open to public access.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_compliance_investigation_filtered.png" alt="A screenshot of the filters available when refining the results in the investigation page."></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="types-of-personal-data">Types of personal data</h3>
+<div class="paragraph">
+<p>The personal data found in files can be general personal data or national identifiers. The third column identifies whether Cloud Compliance uses <a href="#personal-data">proximity validation</a> to validate its findings for the identifier.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 80%;">
+<colgroup>
+<col style="width: 22.7272%;">
+<col style="width: 56.8181%;">
+<col style="width: 20.4547%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Identifier</th>
+<th class="tableblock halign-left valign-top">Proximity validation?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">General</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credit card number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBAN number (International Bank Account Number)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="31"><p class="tableblock">National Identifiers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Belgian ID (Numero National)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brazilian ID (CPF)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bulgarian ID (UCN)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">California Driver's License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Croatian ID (OIB)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cyprus Tax Identification Number (TIC)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Czech/Slovak ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Danish ID (CPR)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dutch ID (BSN)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Estonian ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finnish ID (HETU)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">French Tax Identification Number (SPI)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">German Tax Identification Number (Steuerliche Identifikationsnummer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greek ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hungarian Tax Identification Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Irish ID (PPS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Israeli ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Italian Tax Identification Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latvian ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lithuanian ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Luxembourg ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maltese ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Polish ID (PESEL)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Portuguese Tax Identification Number (NIF)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Romanian ID (CNP)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Slovenian ID (EMSO)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">South African ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spanish Tax Identification Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Swedish ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">U.K. ID (NINO)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USA Social Security Number (SSN)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sensitive-personal-data">Sensitive personal data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Compliance automatically identifies special types of sensitive personal information, as defined by privacy regulations such as <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&amp;from=EN#d1e2051-1-1" target="_blank" rel="noopener">articles 9 and 10 of the GDPR</a>. For example, information regarding a person's health, ethnic origin, or sexual orientation. <a href="#types-of-sensitive-personal-data">See the full list</a>.</p>
+</div>
+<div class="paragraph">
+<p>Cloud Compliance uses artificial intelligence (AI), natural language processing (NLP), machine learning (ML), and cognitive computing (CC) to understand the meaning of the content that it scans in order to extract entities and categorize it accordingly.</p>
+</div>
+<div class="paragraph">
+<p>For example, one sensitive GDPR data category is ethnic origin. Because of its NLP abilities, Cloud Compliance can distinguish the difference between a sentence that reads "George is Mexican" (indicating sensitive data as specified in article 9 of the GDPR), versus "George is eating Mexican food."</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm38/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Only English is supported when scanning for sensitive personal data. Support for more languages will be added later.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="viewing-files-that-contain-sensitive-personal-data">Viewing files that contain sensitive personal data</h3>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>At the top of Cloud Manager, click <strong>Cloud Compliance</strong>.</p>
+</li>
+<li>
+<p>To investigate the details for all sensitive personal data, click the icon next to the sensitive personal data percentage.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_compliance_sensitive_personal.gif" alt="A screenshot of selecting the sensitive personal data percentage."></span></p>
+</div>
+</li>
+<li>
+<p>To investigate the details for a specific type of sensitive personal data, click <strong>View All</strong> and then click the <strong>Investigate Results</strong> icon for a specific type of sensitive personal data.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_sensitive_personal_files.gif" alt="A screenshot of the sensitive personal files dialog box where you can click the Investigate Results icon next to a personal data type."></span></p>
+</div>
+</li>
+<li>
+<p>Investigate the data by searching, sorting, expanding details for a specific file, clicking <strong>Investigate Results</strong> to see masked information, or by downloading the file list.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="types-of-sensitive-personal-data">Types of sensitive personal data</h3>
+<div class="paragraph">
+<p>The sensitive personal data that Cloud Compliance can find in files includes the following:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Criminal Procedures Reference</dt>
+<dd>
+<p>Data concerning a natural person’s criminal convictions and offenses.</p>
+</dd>
+<dt class="hdlist1">Ethnicity Reference</dt>
+<dd>
+<p>Data concerning a natural person’s racial or ethnic origin.</p>
+</dd>
+<dt class="hdlist1">Health Reference</dt>
+<dd>
+<p>Data concerning a natural person’s health.</p>
+</dd>
+<dt class="hdlist1">ICD-9-CM Medical Codes</dt>
+<dd>
+<p>Codes used in the medical and health industry.</p>
+</dd>
+<dt class="hdlist1">ICD-10-CM Medical Codes</dt>
+<dd>
+<p>Codes used in the medical and health industry.</p>
+</dd>
+<dt class="hdlist1">Philosophical Beliefs Reference</dt>
+<dd>
+<p>Data concerning a natural person’s philosophical beliefs.</p>
+</dd>
+<dt class="hdlist1">Religious Beliefs Reference</dt>
+<dd>
+<p>Data concerning a natural person’s religious beliefs.</p>
+</dd>
+<dt class="hdlist1">Sex Life or Orientation Reference</dt>
+<dd>
+<p>Data concerning a natural person’s sex life or sexual orientation.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="categories">Categories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Compliance takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. <a href="#types-of-categories">See the list of categories</a>.</p>
+</div>
+<div class="paragraph">
+<p>Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like resumes or employee contracts can include sensitive data. When you investigate the results, you might find that employee contracts are stored in an insecure location. You can then correct that issue.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm38/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Only English is supported for categories. Support for more languages will be added later.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="viewing-files-by-categories">Viewing files by categories</h3>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>At the top of Cloud Manager, click <strong>Cloud Compliance</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Investigate Results</strong> icon for one of the top 4 categories directly from the main screen, or click <strong>View All</strong> and then click the icon for any of the categories.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_categories.gif" alt="A screenshot of the categories dialog box where you can click the Investigate Results icon next to a category."></span></p>
+</div>
+</li>
+<li>
+<p>Investigate the data by searching, sorting, expanding details for a specific file, clicking <strong>Investigate Results</strong> to see masked information, or by downloading the file list.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="types-of-categories">Types of categories</h3>
+<div class="paragraph">
+<p>Cloud Compliance categorizes your data as follows:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Finance</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Balance Sheets</p>
+</li>
+<li>
+<p>Purchase Orders</p>
+</li>
+<li>
+<p>Invoices</p>
+</li>
+<li>
+<p>Quarterly Reports</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">HR</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Background Checks</p>
+</li>
+<li>
+<p>Compensation Plans</p>
+</li>
+<li>
+<p>Employee Contracts</p>
+</li>
+<li>
+<p>Employee Reviews</p>
+</li>
+<li>
+<p>Health</p>
+</li>
+<li>
+<p>Resumes</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Legal</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>NDAs</p>
+</li>
+<li>
+<p>Vendor-Customer contracts</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Marketing</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Campaigns</p>
+</li>
+<li>
+<p>Conferences</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Operations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Audit Reports</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Sales</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Sales Orders</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Services</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>RFI</p>
+</li>
+<li>
+<p>RFP</p>
+</li>
+<li>
+<p>SOW</p>
+</li>
+<li>
+<p>Training</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Support</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Complaints and Tickets</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Metadata categories</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Application Data</p>
+</li>
+<li>
+<p>Archive Files</p>
+</li>
+<li>
+<p>Audio</p>
+</li>
+<li>
+<p>Business Application Data</p>
+</li>
+<li>
+<p>CAD Files</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+<li>
+<p>Database and index files</p>
+</li>
+<li>
+<p>Design Files</p>
+</li>
+<li>
+<p>Email Application Data</p>
+</li>
+<li>
+<p>Executables</p>
+</li>
+<li>
+<p>Financial Application Data</p>
+</li>
+<li>
+<p>Health Application Data</p>
+</li>
+<li>
+<p>Images</p>
+</li>
+<li>
+<p>Logs</p>
+</li>
+<li>
+<p>Miscellaneous Documents</p>
+</li>
+<li>
+<p>Miscellaneous Presentations</p>
+</li>
+<li>
+<p>Miscellaneous Spreadsheets</p>
+</li>
+<li>
+<p>Videos</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="file-types">File types</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Compliance takes the data that it scanned and breaks it down by file type. Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly. <a href="#types-of-files">See the list of file types</a>.</p>
+</div>
+<div class="paragraph">
+<p>For example, you might be storing CAD files that include very sensitive information about your organization. If they are unsecured, you can take control of the sensitive data by restricting permissions or moving the files to another location.</p>
+</div>
+<div class="sect2">
+<h3 id="viewing-file-types">Viewing file types</h3>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>At the top of Cloud Manager, click <strong>Cloud Compliance</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Investigate Results</strong> icon for one of the top 4 file types directly from the main screen, or click <strong>View All</strong> and then click the icon for any of the file types.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_file_types.gif" alt="A screenshot of the file types dialog box where you can click the Investigate Results icon next to a file type."></span></p>
+</div>
+</li>
+<li>
+<p>Investigate the data by searching, sorting, expanding details for a specific file, clicking <strong>Investigate Results</strong> to see masked information, or by downloading the file list.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="types-of-files">Types of files</h3>
+<div class="paragraph">
+<p>Cloud Compliance scans all files for category and metadata insights and displays all file types in the file types section of the dashboard.</p>
+</div>
+<div class="paragraph">
+<p>But when Cloud Compliance detects Personal Identifiable Information (PII), or when it performs a DSAR search, only the following file formats are supported:<br>
+.PDF, .DOCX, .DOC, .PPTX, .XLS, .XLSX, .CSV, .TXT, .RTF, and .JSON.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="viewing-data-from-specific-working-environments">Viewing data from specific working environments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can filter the contents of the Cloud Compliance dashboard to see compliance data for all working environments and databases, or for just specific working environments.</p>
+</div>
+<div class="paragraph">
+<p>When you filter the dashboard, Cloud Compliance scopes the compliance data and reports to just those working environments that you selected.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Click the filter drop-down, select the working environments that you'd like to view data for, and click <strong>View</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cloud_compliance_filter.gif" alt="screenshot cloud compliance filter"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="accuracy-of-information-found">Accuracy of information found</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>NetApp can't guarantee 100% accuracy of the personal data and sensitive personal data that Cloud Compliance identifies. You should always validate the information by reviewing the data.</p>
+</div>
+<div class="paragraph">
+<p>Based on our testing, the table below shows the accuracy of the information that Cloud Compliance finds. We break it down by <em>precision</em> and <em>recall</em>:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Precision</dt>
+<dd>
+<p>The probability that what Cloud Compliance finds has been identified correctly. For example, a precision rate of 90% for personal data means that 9 out of 10 files identified as containing personal information, actually contain personal information. 1 out of 10 files would be a false positive.</p>
+</dd>
+<dt class="hdlist1">Recall</dt>
+<dd>
+<p>The probability for Cloud Compliance to find what it should. For example, a recall rate of 70% for personal data means that Cloud Compliance can identify 7 out of 10 files that actually contain personal information in your organization. Cloud Compliance would miss 30% of the data and it won’t appear in the dashboard.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Cloud Compliance is in a Controlled Availability release and we are constantly improving the accuracy of our results. Those improvements will be automatically available in future Cloud Compliance releases.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 80%;">
+<colgroup>
+<col style="width: 38.4615%;">
+<col style="width: 30.7692%;">
+<col style="width: 30.7693%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Precision</th>
+<th class="tableblock halign-left valign-top">Recall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Personal data - General</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90%-95%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60%-80%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Personal data - Country identifiers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30%-60%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40%-60%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sensitive personal data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80%-95%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20%-30%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categories</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90%-97%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60%-80%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="whats-included-in-each-file-list-report-csv-file">What’s included in each file list report (CSV file)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From each Investigation page you can download file lists (in CSV format) that include details about the identified files. If there are more than 10,000 results, only the top 10,000 appear in the list.</p>
+</div>
+<div class="paragraph">
+<p>Each file list includes the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>File name</p>
+</li>
+<li>
+<p>Location type</p>
+</li>
+<li>
+<p>Working environment</p>
+</li>
+<li>
+<p>Storage repository</p>
+</li>
+<li>
+<p>Protocol</p>
+</li>
+<li>
+<p>File path</p>
+</li>
+<li>
+<p>File type</p>
+</li>
+<li>
+<p>Category</p>
+</li>
+<li>
+<p>Personal information</p>
+</li>
+<li>
+<p>Sensitive personal information</p>
+</li>
+<li>
+<p>Deletion detection date</p>
+<div class="paragraph">
+<p>A deletion detection date identifies the date that the file was deleted or moved. This enables you to identify when sensitive files have been moved. Deleted files aren't part of the file number count that appears in the dashboard or on the Investigation page. The files only appear in the CSV reports.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/us-en/occm38/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/us-en/occm38/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">On this page</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Terms of use</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie settings</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">Send feedback about this page</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/occm38/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/occm38/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/occm38/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/occm38/js/ie-tabbed-blocks.js'></script>
+    <script src='/us-en/occm38/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
