@@ -13,6 +13,12 @@ summary: Cloud Manager enables IT experts and cloud architects to centrally mana
 
 Cloud Manager enables IT experts and cloud architects to centrally manage their hybrid multi-cloud infrastructure using NetApp’s cloud solutions.
 
+== BlueXP
+
+NetApp BlueXP extends and enhances the capabilities that were provided through Cloud Manager.
+
+https://docs.netapp.com/us-en/bluexp-family/[Go to the BlueXP documentation^]
+
 == Discover what's new
 
 * link:reference_key_changes.html[Important changes in Cloud Manager]
